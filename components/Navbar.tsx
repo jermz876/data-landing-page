@@ -20,16 +20,16 @@ const Navbar = () => {
                 </Link>
                 <ul className="md:flex space-x-7 hidden">
                     <Link href="/">
-                        <li>Company</li>
+                        <li className="hover:text-[#00df9a]">Company</li>
                     </Link>
                     <Link href="#resources">
-                        <li>Resources</li>
+                        <li className="hover:text-[#00df9a]">Resources</li>
                     </Link>
                     <Link href="#plans">
-                        <li>Packages</li>
+                        <li className="hover:text-[#00df9a]">Packages</li>
                     </Link>
                     <Link href="#socials">
-                        <li>Contact</li>
+                        <li className="hover:text-[#00df9a]">Contact</li>
                     </Link>
                 </ul>
                 <div onClick={handleNav} className=" block md:hidden ">
@@ -49,25 +49,24 @@ const Navbar = () => {
                     <h2 className="text-3xl font-bold text-[#00df9a]">REACT.</h2>
                     <ul className="pt-20  uppercase">
                         <Link href="/">
-                            <li onClick={() => setNav(true)} className="p-4 border-b border-gray-600">
+                            <li onClick={() => setNav(true)} className=" p-4 border-b border-gray-600 hover:text-[#00df9a]">
                                 Company
                             </li>
                         </Link>
                         <Link href="#resources">
-                            <li onClick={() => setNav(true)} className="p-4 border-b border-gray-600">
+                            <li onClick={() => setNav(true)} className="p-4 border-b border-gray-600 hover:text-[#00df9a]">
                                 Resources
                             </li>
                         </Link>
                         <Link href="#plans">
-                            <li onClick={() => setNav(true)} className="p-4 border-b border-gray-600">
+                            <li onClick={() => setNav(true)} className="p-4 border-b border-gray-600 hover:text-[#00df9a]">
                                 Packages
                             </li>
                         </Link>
-                        <Link href="#socials">
-                            <li onClick={() => setNav(true)} className="p-4">
-                                Contact
-                            </li>
-                        </Link>
+
+                        <li onClick={() => setNav(true)} className="p-4 hover:text-[#00df9a]">
+                            <Link href="#socials">Contact</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
