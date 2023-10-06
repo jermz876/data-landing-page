@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
@@ -14,13 +15,22 @@ const Navbar = () => {
     return (
         <nav className="w-full bg-[#000300] text-white ">
             <div className="flex justify-between items-center max-w-[1400px] w-full mx-auto px-4 h-24">
-                <h1 className="text-3xl font-bold text-[#00df9a]">REACT.</h1>
+                <Link href="/">
+                    <h1 className="text-3xl font-bold text-[#00df9a]">REACT.</h1>
+                </Link>
                 <ul className="md:flex space-x-7 hidden">
-                    <li>Home</li>
-                    <li>Company</li>
-                    <li>Resources</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                    <Link href="/">
+                        <li>Company</li>
+                    </Link>
+                    <Link href="#resources">
+                        <li>Resources</li>
+                    </Link>
+                    <Link href="#plans">
+                        <li>Packages</li>
+                    </Link>
+                    <Link href="#socials">
+                        <li>Contact</li>
+                    </Link>
                 </ul>
                 <div onClick={handleNav} className=" block md:hidden ">
                     {!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
@@ -36,13 +46,28 @@ const Navbar = () => {
                             : "fixed left-[-100%] top-0 ease-in-out duration-500"
                     }
                 >
-                    <h1 className="text-3xl font-bold text-[#00df9a]">REACT.</h1>
+                    <h2 className="text-3xl font-bold text-[#00df9a]">REACT.</h2>
                     <ul className="pt-20  uppercase">
-                        <li className="p-4 border-b border-gray-600">Home</li>
-                        <li className="p-4 border-b border-gray-600">Company</li>
-                        <li className="p-4 border-b border-gray-600">Resources</li>
-                        <li className="p-4 border-b border-gray-600">About</li>
-                        <li className="p-4">Contact</li>
+                        <Link href="/">
+                            <li onClick={() => setNav(true)} className="p-4 border-b border-gray-600">
+                                Company
+                            </li>
+                        </Link>
+                        <Link href="#resources">
+                            <li onClick={() => setNav(true)} className="p-4 border-b border-gray-600">
+                                Resources
+                            </li>
+                        </Link>
+                        <Link href="#plans">
+                            <li onClick={() => setNav(true)} className="p-4 border-b border-gray-600">
+                                Packages
+                            </li>
+                        </Link>
+                        <Link href="#socials">
+                            <li onClick={() => setNav(true)} className="p-4">
+                                Contact
+                            </li>
+                        </Link>
                     </ul>
                 </div>
             </div>

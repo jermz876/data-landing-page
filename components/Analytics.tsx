@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Analytics = () => {
     return (
-        <section className="w-full bg-white ">
+        <section id="resources" className="w-full bg-white ">
             <div className="max-w-4xl w-full mx-auto grid md:grid-cols-2 py-16 px-4">
                 <Image className="w-[500px] mx-auto my-4" src={Laptop} alt="laptop" />
                 <div className="flex flex-col justify-center">
